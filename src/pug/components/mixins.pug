@@ -1,0 +1,14 @@
+mixin product_card (image, name, price)
+  .product-card
+    .product-card__image
+      img(src=image)
+    .product-card__content
+      h3.product-card__title= name
+      p.product-card__price
+        sup $
+        | #{price}/month
+      p.product-card__description Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo doloribus non sunt accusantium.
+      button.product-card__button select plan
+
+mixin button (title)
+  button.button_title= title 

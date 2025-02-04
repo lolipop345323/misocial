@@ -1,0 +1,33 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/styles.css")
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+        title Document
+    body
+        
+        include components/mixins.pug
+
+        header 
+            include components/header.pug
+        .wrapper
+            main
+                h2 Select a Plan
+                p.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo doloribus non sunt accusantium.
+                .product-card-container
+                    .product-card
+                        +product_card('img/free-plan-logo.svg', 'personal', '0')
+                        //- +button ("select a plan")
+                    .product-card
+                        +product_card('img/medium-plan-logo.svg', 'personal', '29')
+                        //- +button ("select a plan")
+                    .product-card
+                        +product_card('img/large-plan-logo.svg', 'personal', '49')
+                        //- +button ('select a plan')
+
+        footer
+            include components/footer.pug
